@@ -1,0 +1,34 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+source /usr/share/fzf/completion.bash && source /usr/share/fzf/key-bindings.bash
+
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+export EDITOR=/usr/bin/nvim
+export PATH=~/.local/bin/:$PATH
+export PATH=~/.go/bin/:$PATH
+alias clip="xclip -sel clip"
+alias youtube-dl-playlist="youtube-dl --extract-audio -f 250 -o '%(title)s.%(ext)s'"
+alias en="setxkbmap -layout us"
+alias shitdown="shutdown now"
+alias gc="git checkout"
+alias ls='ls --color=auto'
+alias cl='clear'
+alias f='fzf'
+alias la='ls -a --color=auto'
+alias vim='nvim'
+alias passphrase='xkcdpass -n 4'
+alias ff='firefox'
+alias ch='chromium'
+
+gg(){
+	gcc "$1" && ./a.out
+}
+
+PS1='[\u@\h \W]\$ '
+set -o vi
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
