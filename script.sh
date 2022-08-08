@@ -2,8 +2,8 @@
 curl -fLo $HOME/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 
-git clone -C ~/ https://git.suckless.org/st
-git clone -C ~/ https://git.suckless.org/dwm
+git -C ~/ clone https://git.suckless.org/st
+git -C ~/ clone https://git.suckless.org/dwm
 
 cp ./configFiles/config.h.st ~/st
 cp ./configFiles/config.h.dwm ~/dwm
